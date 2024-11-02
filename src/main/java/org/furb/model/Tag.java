@@ -46,7 +46,7 @@ public class Tag implements Comparable<Tag> {
 
     @Override
     public int compareTo(Tag o) {
-        return this.content.compareTo(o.content);
+        return this.contentCleared.compareTo(o.contentCleared);
     }
 
     @Override
