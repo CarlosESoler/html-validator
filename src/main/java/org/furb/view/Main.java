@@ -119,7 +119,6 @@ public class Main extends javax.swing.JFrame {
             model.setRowCount(0);
 
             for (Tag tag : archive.getHtmlValidator().orderByNameDesc()) {
-                System.out.println(tag.getContentCleared() + " frequencia: " + tag.getFrequency());
                 model.addRow(new Object[]{ tag.getContentCleared().replaceAll("[<>]", ""), tag.getFrequency() });
             }
 
