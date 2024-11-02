@@ -73,7 +73,7 @@ public class HtmlValidator {
         return tagsFromObjectList;
     }
 
-    public Tag[] getFrequencyDesc() {
+    public Tag[] orderByNameDesc() {
         Tag[] castedTagList = this.castListToArray();
         AbstractSort<Tag> optimizedBubbleSort = new OptimizedBubbleSort<>(castedTagList);
         optimizedBubbleSort.sort();

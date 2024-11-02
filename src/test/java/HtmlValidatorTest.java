@@ -1,5 +1,4 @@
 import org.furb.exception.IllegalTagsSequence;
-import org.furb.exception.InvalidHtmlStructureException;
 import org.furb.exception.InvalidTagException;
 import org.furb.service.HtmlValidator;
 import org.junit.jupiter.api.BeforeEach;
@@ -35,7 +34,7 @@ public class HtmlValidatorTest {
                 "</html>"
         };
         assertTrue(validator.isValidTags(newTags));
-        assertEquals(2, validator.getFrequencyDesc()[0].getFrequency());
+        assertEquals(1, validator.orderByNameDesc()[0].getFrequency());
     }
 
     @Test

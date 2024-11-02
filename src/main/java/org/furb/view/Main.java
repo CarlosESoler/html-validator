@@ -1,10 +1,6 @@
 package org.furb.view;
 
 
-import java.awt.Color;
-import javax.swing.JOptionPane;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import org.furb.model.Tag;
 import org.furb.service.ArchiveReader;
@@ -122,7 +118,7 @@ public class Main extends javax.swing.JFrame {
 
             model.setRowCount(0);
 
-            for (Tag tag : archive.getHtmlValidator().getFrequencyDesc()) {
+            for (Tag tag : archive.getHtmlValidator().orderByNameDesc()) {
                 System.out.println(tag.getContentCleared() + " frequencia: " + tag.getFrequency());
                 model.addRow(new Object[]{ tag.getContentCleared().replaceAll("[<>]", ""), tag.getFrequency() });
             }
