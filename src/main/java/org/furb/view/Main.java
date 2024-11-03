@@ -112,7 +112,7 @@ public class Main extends javax.swing.JFrame {
             String path = archivePath.getText();
             ArchiveReader archive = new ArchiveReader(path);
             archive.readArchiveLines();
-
+            archive.getHtmlValidator().checkStackIsEmpty();
             archiveFeedback.setText("O arquivo está bem formatado!");
             DefaultTableModel model = (DefaultTableModel) archiveResult.getModel();
 

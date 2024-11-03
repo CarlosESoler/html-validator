@@ -21,7 +21,7 @@ public class HtmlValidator {
 
     public boolean isValidTags(String[] tagsContent) {
         for (String content : tagsContent) {
-            Tag tag = new Tag(content);
+            Tag tag = new Tag(content.toLowerCase());
             if (!tag.isValidTag()) throw new InvalidTagException("A tag " + content + " é inválida! Sua estrutura não segue os requisitos.");
 
             tag.tagClear();
